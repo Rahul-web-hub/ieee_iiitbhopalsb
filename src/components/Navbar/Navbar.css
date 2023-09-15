@@ -1,0 +1,216 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    margin: 1rem 2rem;
+    font-size: 2rem;
+}
+
+
+.navbar {
+    margin: 0;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+.container
+{
+    font-family: Raleway;
+    margin: 0 auto;
+	padding: 1rem;
+	text-align: center;
+}
+
+.container a
+{
+    color: #FFF;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+
+.contact{
+    border: 1px solid currentColor;
+    border-radius: 2rem;
+    color: #5e5e5e;
+    font-size: 1rem;
+    font-family: verdana;
+    font-weight: 100;
+    overflow: hidden;
+    padding: 1rem 3rem;
+    position: relative;
+    text-decoration: none;
+    transition: .2s transform ease-in-out;
+    will-change:transform;
+    z-index: 0;
+}
+
+
+.contact::after{
+    background-color: yellow;
+    border-radius: 2rem;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: .2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+.contact:hover::after{
+        transform: translate(0, 0);
+}
+.contact:hover{
+        border: 1px solid transparent;
+        color: #000000;
+        transform: scale(1.05);
+        will-change: transform;
+}
+  
+
+
+/* Highlight text in  */
+.highlightTextIn a:before
+{
+    position: absolute;
+    color: #000000;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+    overflow: hidden;
+    content: attr(alt);
+    transition: all 0.3s;
+    transform: scale(0.8);
+    opacity: 0;
+} 
+.highlightTextIn a:hover:before
+{
+    transform: scale(1);
+    opacity: 1;
+}
+
+.highlightTextIn a
+{
+    color: #000000; 
+}
+
+.highlightTextIn a:before
+{
+    transform: scale(1.2);
+} 
+
+
+
+
+
+/* Toggle Navbar  */
+.toggle{
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    z-index: 2;
+    display: none;
+  }
+  .toggle a{
+    text-decoration: none;
+    color: #262626;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .menu{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  ul li{
+    list-style: none;
+  }
+  
+  ul li a{
+    padding: 10px;
+    display: inline-block;
+    font-family: verdana;
+    font-size: 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #262626;
+  }
+  ul li a:hover{
+    background: #FFFC85
+  }
+  .menu.active{
+    right: 0;
+    overflow: auto;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:860px) {
+    .container {
+        display: none;
+    }
+    nav {
+        justify-content:unset;
+    }
+    .contact {
+        position:fixed;
+        right: 5rem;
+    }
+    .toggle{
+        display: unset;
+      }
+    
+}
