@@ -11,8 +11,8 @@ function Navbar() {
         <div className="navbar highlightTextIn">
             <div className="container">
                 <a href="#" alt="HOME">HOME</a>
-                <a href="#" alt="PORTFOLIO">EVENTS</a>
-                <a href="#" alt="ARTICLES">TEAM</a>
+                <a href="#" alt="EVENTS">EVENTS</a>
+                <a href="#" alt="TEAM">TEAM</a>
                 <a href="#" alt="ABOUT">ABOUT</a>
             </div>
             <a className="contact" href="#">CONTACT</a>
