@@ -1,133 +1,30 @@
-*{
+/* styles.css */
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
- }
-
- body {
-    height: 100vh;
-    background-color: #00032a;
-    /* background-image: ; */
-
- }
-
- li {
-    list-style: none;
- }
-
- a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
- }
-
- a:hover {
-    color: orange;
- }
-
- header {
-    position: relative;
-    margin: 1rem;
-    padding: 0 2rem;
- }
-
- .navbar {
+    overflow: hidden; /* Prevent scrolling while the welcome screen is visible */
+  }
+  
+  .welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
+    height: 100%;
+    background-color: #000; /* Black background color */
+    color: #fff; /* White text color */
     display: flex;
-    align-items: center; 
-    justify-content: space-between;
- }
-
- .navbar .logo a{
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.navbar .links {
-    display: flex;
-    gap: 2rem;
-}
-
-.navbar .toggle_btn {
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.action_btn {
-    background-color: orange;
-    color:#fff;
-    padding:0.5rem 1rem;
-    border:none;
-    outline: none;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    cursor:pointer; 
-    transition: scale .2 ease;
-   }
-
-   .action_btn:hover{
-    scale: 1.05;
-    color: #fff;
-   }
-
-   .action_btn:active {
-    scale: 0.95;
-   }
-
-
-/* Dropdown Menu  */
-.dropdown_menu {
-    position:absolute;
-    right: 2rem;
-    top: 60px;
-    width: 250px;
-    height: 0;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: height 0.5s cubic-bezier(.73,.32,.34,1.5);
-}
-
-.open {
-    height: 220px;
-}
-
-.dropdown_menu li {
-    padding: 0.7rem;
-    width: 250px;
-    display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-}
-
-.dropdown_menu .action_btn {
-    width: 100%;
-    display: flex;
-    justify-content: center;  
-
-}
-
-
-/* responsive design  */
-@media (max-width: 700px){
- .navbar .links,
- .navbar .action_btn {
-     display: none;
- }
- .navbar .toggle_btn {
-     display: block;
- } 
- .dropdown_menu{
-     display:block;
- }
-}
-
-
-
+    align-items: center;
+    transition: transform 0.5s ease-in-out; /* Smoother animation with ease-in-out */
+    transform: translateY(0); /* Initially off-screen */
+  }
+  
+  /* Add any additional styling as needed */
+  .welcome-screen h1 {
+    font-size: 5rem;
+    font-weight: bold;
+  }
+  
