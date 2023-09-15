@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
       welcomeScreen.style.transform = 'translateY(-100%)';
       // Allow scrolling on the page
       document.body.style.overflow = 'auto';
-  }, 2000); // 2000 milliseconds = 2 seconds
+  }, 1400);
 });
 
 

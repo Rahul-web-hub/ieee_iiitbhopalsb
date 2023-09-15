@@ -1,30 +1,29 @@
-/* styles.css */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Prevent scrolling while the welcome screen is visible */
-  }
-  
-  .welcome-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000; /* Black background color */
-    color: #fff; /* White text color */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.5s ease-in-out; /* Smoother animation with ease-in-out */
-    transform: translateY(0); /* Initially off-screen */
-  }
-  
-  /* Add any additional styling as needed */
-  .welcome-screen h1 {
-    font-size: 5rem;
-    font-weight: bold;
-  }
-  
+body {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+.welcome-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.welcome-screen::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: -1;
+}
