@@ -1,18 +1,8 @@
 
 import React from "react";
-import Home from "./Home/home";
-import Navbar from "../components/Navbar/Navbar";
-
-
-function App() {
-    return <>
-        <Navbar />
-        <Home />
-    </>
-}
-import React from 'react';
-import { BrowserRouter,Routes, Route } from 'react-router-dom';
-import Home from '../components/Home'; // Import your Home component
+import Home from "../components/Home"
+// import Navbar from "../components/Navbar/Navbar";
+import { Route,BrowserRouter,Routes } from "react-router-dom";
 
 const App = () => {
   return (
